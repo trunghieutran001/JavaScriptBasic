@@ -1,30 +1,18 @@
-// Hiểu hơn về câu lệnh điều kiện
-// Và phép o sánh
-
 /*
-    0
-    ''
-    null
-    undefined
-    NaN
-    false
+Chuỗi trong JavaScript
+
+1. Tạo chuỗi
+    - Các cách tạo chuỗi
+    - Nên dùng cách nào? Lí do?
+    - Kiểm tra data type
+2. Một số case sử dụng backslash (\)
+3. Xem độ dài chuỗi
+4. Chú ý độ dài chuỗi
+5. Template string ES6
 */
-var a = 1;
-var b = 2;
+var firstName = 'Hieu';
+var lastName = 'Tran';
 
-//AND
-var result1 = 'A' && 'B' && 'C';
-var result2 = null && 'B' && 'C';
-
-//OR
-var result3 = 'A' || undefined || 'C';
-
-console.log(result1);
-console.log(result2);
-
-if (result3) {
-    console.log('Dieu kien dung');
-}
-else {
-    console.log('Dieu kien sai');
-}
+console.log('Toi la: ' + firstName + ' ' + lastName);
+console.log(`Toi la: ${firstName} ${lastName}`);
+console.log('Data type: ', typeof firstName);
