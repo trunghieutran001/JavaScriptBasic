@@ -1,26 +1,63 @@
-// Toán tử ++ --
-// Prefix & Postfix
+/*
+Kiểu dữ liệu trong JavaScript
 
-var a = 6;
-//step 1: + 1 cho a, a = a + 1 -> a = 7
-//step 2: Tra ve a sau khi được + 1
-var output = ++a;
-console.log('output', output);
-console.log('a = ', a);
+1. Kiểu dữ liệu nguyên thủy - Primitive Data
+    - Number
+    - String
+    - Boolean
+    - Underfined
+    - Null
+    - Symbol
 
-var b = 6;
-//step 1: 'b copy', 'b copy' = 6
-//step 2: +1 của b, b = b + 1 -> b = 7
-//step 3: tra ve 'b copy'
-var output = b++;
-console.log('output', output);
-console.log('b = ', b);
+2. Dữ liệu phức tạp - Complex Data
+    - Function
+    - Object
+*/
 
-var number = 6;
-var output = number++ + --number;
-//6 + 6
-console.log('output: ', output);
+//Number type
+var a = 1;
+var b = 2;
+var c = 1.5;
 
-var output = ++number * 2 - number-- * 2;
-// 7*2 -7*2
-console.log('output: ', output);
+console.log(typeof a);
+
+//string type
+var fullName = 'Trung Hieu Tran';
+console.log(typeof fullName);
+
+// Boolean type
+var isSuccess = false;
+console.log(typeof isSuccess);
+
+// undefined type
+var age;
+console.log(typeof age);
+
+// Null
+var isNull = null;
+
+//Symbol
+var id = Symbol('id'); //unique
+var id2 = Symbol('id'); //unique
+
+//Function
+var myFunction = function () {
+    alert('Hi. Xin choa cac ban');
+};
+console.log('Function type: ', typeof Object);
+
+//Object types
+var myObject = {
+    name: 'Tran Hieu',
+    age: 18,
+    address: 'Ha Noi',
+    myFunction: function () { }
+
+};
+console.log('Object: ', myObject);
+console.log('Object type: ', typeof myObject);
+
+//Array type
+var myArray = ['JavaScript', 'PHP', 'Ruby'];
+console.log(myArray);
+console.log('Array type: ', typeof myArray);
