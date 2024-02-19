@@ -1,24 +1,47 @@
 /*
-1. Hàm?
-    - Một khối mã
-    - Làm 1 việc cụ thể
-
-2. Loại hàm
-    - Built-in
-    - Tự định nghĩa
-
-3. Tính chất
-    - Không thực thi khi định nghĩa
-    - Sẽ thực thi khi được gọi
-    - Có thể nhận tham số
-    - Có thể trả về 1 giá trị
-
-4. Tạo hàm đầu tiên
+1. Tham số?
+    - Định nghĩa?
+    - Kiểu dữ liệu?
+    - Tính private?
+    - 1 Tham số
+    - Nhiều tham số
+2. Truyền tham số
+    - 1 tham số
+    - Nhiều tham số
+3. Arguments?
+    - Đối tượng arguments
+    - Giới thiệu vòng for of
 */
+function writeLog(message, message2) {
+    console.log(message)
+    console.log(message2)
+    console.log(typeof message)
+}
+writeLog('Test message', 'Test 2');
 
-// a-z A-Z 0-9 _ $
 
-function showDialog() {
-    alert('Hi xin chao cac ban')
-};
-console.log(showDialog())
+function writeLog1() {
+    console.log(arguments)
+}
+writeLog1('Log 1', 'Log 2', 'Log 3');
+
+
+function writeLog2() {
+    for (var param of arguments) {
+        console.log(param)
+    }
+}
+writeLog2('Log 1', 'Log 2', 'Log 3');
+
+
+function writeLog3() {
+    var myString = '';
+    for (var param of arguments) {
+        myString += `${param} - `
+    }
+    console.log(myString);
+}
+writeLog3('Log 1', 'Log 2', 'Log 3');
+
+
+
