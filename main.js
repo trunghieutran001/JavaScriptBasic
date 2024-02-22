@@ -1,30 +1,22 @@
-// Object trong JavaScript
+// Object constructor
 
-var emailKey = 'email';
-var myInfo = {
-    name: 'Tran Hieu',
-    age: 18,
-    address: 'Ha Noi, VN',
-    [emailKey]: 'trunghieutran@gmail.com',
-    getName: function () {
-        return this.name;
-    },
-    getAge: function () {
-        return this.age;
+function User(firstName, lastName, avatar) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.avatar = avatar;
+
+    this.getName = function () {
+        return `${this.firstName} ${this.lastName}`
     }
-};
+}
 
-myInfo.email = 'trunghieutran@gmail.com';
-console.log(myInfo);
+var author = new User('Hieu', 'Tran', 'Avatar');
+var user = new User('Vu', 'Nguyen', 'Avatar');
 
-var myKey = 'address';
+author.title = 'Hello member';
+user.comment = 'Xin chao admin';
+console.log(author);
+console.log(user);
 
-console.log(myInfo);
-
-delete myInfo.address;
-console.log(myInfo);
-
-console.log(myInfo.getName());
-console.log(myInfo.getAge());
-// function --> Phương thức / method
-// other --> Thuộc tính / property
+console.log(author.getName());
+console.log(user.getName());
