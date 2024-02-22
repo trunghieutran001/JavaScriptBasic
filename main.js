@@ -1,47 +1,26 @@
 /*
-1. Tham số?
-    - Định nghĩa?
-    - Kiểu dữ liệu?
-    - Tính private?
-    - 1 Tham số
-    - Nhiều tham số
-2. Truyền tham số
-    - 1 tham số
-    - Nhiều tham số
-3. Arguments?
-    - Đối tượng arguments
-    - Giới thiệu vòng for of
+Một số điều cần biết về function
+
+1. Khi function đặt trung tên?
+2. Khai báo biến trong hàm?
+3. Định nghĩa hàm trong hàm?
 */
-function writeLog(message, message2) {
-    console.log(message)
-    console.log(message2)
-    console.log(typeof message)
-}
-writeLog('Test message', 'Test 2');
 
+function showMessage() {
+    console.log('Message 1');
 
-function writeLog1() {
-    console.log(arguments)
-}
-writeLog1('Log 1', 'Log 2', 'Log 3');
-
-
-function writeLog2() {
-    for (var param of arguments) {
-        console.log(param)
+};
+function showMessage() {
+    function showMessage2() {
+        console.log('Message 2');
     }
+    showMessage2();
 }
-writeLog2('Log 1', 'Log 2', 'Log 3');
+/*function showMessage() {
+    var fullName = 'Tran Hieu';
+    console.log(fullName);
+}*/
 
-
-function writeLog3() {
-    var myString = '';
-    for (var param of arguments) {
-        myString += `${param} - `
-    }
-    console.log(myString);
-}
-writeLog3('Log 1', 'Log 2', 'Log 3');
-
-
+showMessage();
+console.log = (fullName);
 
