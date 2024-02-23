@@ -1,25 +1,35 @@
-/*
-    Object prototype - Basic
-    1. Prototype là gì?
-    2. Sử dụng khi nào?
-*/
-function User(firstName, lastName, avatar) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.avatar = avatar;
-    this.getName = function () {
-        return `${this.firstName} ${this.lastName}`;
-    }
-} s
+// Câu lệnh rẽ nhanh - Switch
+var date = 3;
 
-User.prototype.className = 'F8';
-User.prototype.getClassName = function () {
-    return this.className;
-}
+switch (date) {
+    case 2:
+        console.log('Today is monday');
+        break;
+    case 3:
+        console.log('Today is Tuesday');
+        break;
+    case 4:
+        console.log('Today is wednesday');
+        break;
+    case 5:
+        console.log('Today is thursday');
+        break;
+    case 6:
+        console.log('To day is Friday');
+        break;
+};
 
-var user = new User('Hieu', 'Tran', 'Avatar 1');
-var user1 = new User('Howard', 'Tran', 'Avatar 2');
+//case 2
+var year = 5;
+switch (year) {
+    case 2:
+    case 3:
+    case 4:
+        console.log('2 3 4');
+        break;
+    case 5:
+        console.log('5');
+    default:
+        console.log('Khong biet');
+};
 
-
-console.log(user.className);
-console.log(user1.getClassName());
