@@ -1,35 +1,25 @@
-// Câu lệnh rẽ nhanh - Switch
-var date = 3;
+// Toán tử 3 ngôi - Ternary operator
 
-switch (date) {
-    case 2:
-        console.log('Today is monday');
-        break;
-    case 3:
-        console.log('Today is Tuesday');
-        break;
-    case 4:
-        console.log('Today is wednesday');
-        break;
-    case 5:
-        console.log('Today is thursday');
-        break;
-    case 6:
-        console.log('To day is Friday');
-        break;
-};
+var course = {
+    name: 'JavaScript',
+    coin: 0
+}
 
-//case 2
-var year = 5;
-switch (year) {
-    case 2:
-    case 3:
-    case 4:
-        console.log('2 3 4');
-        break;
-    case 5:
-        console.log('5');
-    default:
-        console.log('Khong biet');
-};
+// way 1
+if (course.coin > 0) {
+    console.log(`${course.coin} Coins`);
+}
+else {
+    console.log('Free');
+}
 
+// way 2
+var result = course.coin > 0 ? `${course.coin} Coins` : 'Free';
+console.log(result);
+
+// Example
+var a = 1;
+var b = 2;
+
+var c = (a > 0) ? a : b;
+console.log(c);
