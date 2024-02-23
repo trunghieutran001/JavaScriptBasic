@@ -1,40 +1,14 @@
-// For-of loop
+// do while loop
 
-// Array
-var languages = [
-    'JavaScript',
-    'PHP',
-    'Java'
-];
+var a = 0;
+var isSuccess = false;
 
-for (var value of languages) {
-    console.log(value);
-}
+do {
+    a++;
+    console.log('Nạp thẻ lần ' + a);
+    // Thành công
+    if (false) {
+        isSuccess = true;
+    }
 
-// String
-var myString = 'trunghieutran';
-for (var text of myString) {
-    console.log(text);
-}
-
-// Object
-var myInfo = {
-    name: 'Tran Hieu',
-    age: 22
-};
-
-console.log(Object.keys(myInfo));
-
-console.log(Object.values(myInfo));
-
-for (var value of Object.keys(myInfo)) {
-    console.log(value);
-}
-
-for (var value of Object.keys(myInfo)) {
-    console.log(myInfo[value]);
-}
-
-for (var value of Object.values(myInfo)) {
-    console.log(value);
-}
+} while (!isSuccess && a <= 3);
