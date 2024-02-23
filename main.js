@@ -1,43 +1,40 @@
-// for-in loop
+// For-of loop
+
+// Array
+var languages = [
+    'JavaScript',
+    'PHP',
+    'Java'
+];
+
+for (var value of languages) {
+    console.log(value);
+}
+
+// String
+var myString = 'trunghieutran';
+for (var text of myString) {
+    console.log(text);
+}
+
+// Object
 var myInfo = {
-    name: 'Hieu Tran',
-    age: 18,
-    address: 'Ha Noi, VN'
+    name: 'Tran Hieu',
+    age: 22
 };
 
-for (var key in myInfo) {
-    console.log(key);
+console.log(Object.keys(myInfo));
+
+console.log(Object.values(myInfo));
+
+for (var value of Object.keys(myInfo)) {
+    console.log(value);
 }
 
-for (var key in myInfo) {
-    console.log(myInfo);
+for (var value of Object.keys(myInfo)) {
+    console.log(myInfo[value]);
 }
 
-for (var key in myInfo) {
-    console.log(myInfo[key]);
-}
-// case 2: Array
-var languages = [
-    'Javascript',
-    'PHP',
-    'Ruby',
-    'Java'
-];
-for (var key in languages) {
-    console.log(key);
-}
-
-var languages = [
-    'Javascript',
-    'PHP',
-    'Ruby',
-    'Java'
-];
-for (var key in languages) {
-    console.log(languages[key]);
-}
-
-var myString = 'JavaScript';
-for (var key in myString) {
-    console.log(myString[key]);
+for (var value of Object.values(myInfo)) {
+    console.log(value);
 }
