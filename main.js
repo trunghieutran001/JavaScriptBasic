@@ -1,25 +1,43 @@
-// Toán tử 3 ngôi - Ternary operator
+// for-in loop
+var myInfo = {
+    name: 'Hieu Tran',
+    age: 18,
+    address: 'Ha Noi, VN'
+};
 
-var course = {
-    name: 'JavaScript',
-    coin: 0
+for (var key in myInfo) {
+    console.log(key);
 }
 
-// way 1
-if (course.coin > 0) {
-    console.log(`${course.coin} Coins`);
-}
-else {
-    console.log('Free');
+for (var key in myInfo) {
+    console.log(myInfo);
 }
 
-// way 2
-var result = course.coin > 0 ? `${course.coin} Coins` : 'Free';
-console.log(result);
+for (var key in myInfo) {
+    console.log(myInfo[key]);
+}
+// case 2: Array
+var languages = [
+    'Javascript',
+    'PHP',
+    'Ruby',
+    'Java'
+];
+for (var key in languages) {
+    console.log(key);
+}
 
-// Example
-var a = 1;
-var b = 2;
+var languages = [
+    'Javascript',
+    'PHP',
+    'Ruby',
+    'Java'
+];
+for (var key in languages) {
+    console.log(languages[key]);
+}
 
-var c = (a > 0) ? a : b;
-console.log(c);
+var myString = 'JavaScript';
+for (var key in myString) {
+    console.log(myString[key]);
+}
