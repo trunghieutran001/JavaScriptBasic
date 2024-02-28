@@ -1,18 +1,16 @@
-Array.prototype.map2 = function (callback) {
-    var output = [], arrayLength = this.length;
-    for (let i = 0; i < arrayLength; ++i) {
-        var result = callback(this[i], i);
-        output.push(result);
-    }
-    return output;
-}
-var courses = [
-    'JavaScript',
-    'PHP',
-    'Ruby'
-];
+// forEach, find, filter, some, every, reduce
 
-var htmls = courses.map2(function (course) {
-    return `<h2>${course}</h2>`;
+// forEach
+Array.prototype.forEach2 = function (callback) {
+    for (var index in this) {
+        if (this.hasOwnProperty(index)) {
+            callback(this[index], index, this);
+        }
+    }
+}
+var courses = new Array(100);
+courses.push('JavaScript', 'Ruby');
+
+courses.forEach2(function (course, index, array) {
+    console.log(course, index, array);
 });
-console.log(htmls.join(''));
