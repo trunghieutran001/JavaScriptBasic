@@ -1,15 +1,16 @@
 // forEach, find, filter, some, every, reduce
 
-// some2()
-Array.prototype.some2 = function (callback) {
-    var output = [];
+// every2()
+Array.prototype.every2 = function (callback) {
+    var output = true;
     for (var index in this) {
         if (this.hasOwnProperty(index)) {
-            if (callback(this[index], index, this))
-                return true;
+            if (!callback(this[index], index, this)) {
+                output = false;
+                break;
+            }
+
         }
-        else
-            return false;
     }
     return output;
 }
@@ -22,26 +23,26 @@ var courses = [
     {
         id: 2,
         name: 'HTML, CSS',
-        coin: 0
+        coin: 200
     },
     {
         id: 3,
         name: 'Ruby',
-        coin: 250
+        coin: 200
     },
     {
         id: 4,
         name: 'PHP',
-        coin: 400
+        coin: 200
     },
     {
         id: 5,
         name: 'ReactJS',
-        coin: 500
+        coin: 200
     }
 ];
-var isFree = courses.some2(function (course, index, array) {
+var isFree = courses.every2(function (course, index, array) {
     console.log(index);
-    return course.coin === 4;
+    return course.coin === 200;
 });
 console.log(isFree);
