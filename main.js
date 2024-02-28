@@ -1,48 +1,38 @@
-// forEach, find, filter, some, every, reduce
+// 1. Xác định điểm dừng
+// 2. Logic handle -> Tạo ra cái điểm dừng
 
-// every2()
-Array.prototype.every2 = function (callback) {
-    var output = true;
-    for (var index in this) {
-        if (this.hasOwnProperty(index)) {
-            if (!callback(this[index], index, this)) {
-                output = false;
-                break;
-            }
-
-        }
+//vi du 1
+function countDown(num) {
+    if (num > 0) {
+        console.log(num);
+        return countDown(num - 1);
     }
-    return output;
+    return num;
 }
-var courses = [
-    {
-        id: 1,
-        name: 'JavaScript',
-        coin: 200
-    },
-    {
-        id: 2,
-        name: 'HTML, CSS',
-        coin: 200
-    },
-    {
-        id: 3,
-        name: 'Ruby',
-        coin: 200
-    },
-    {
-        id: 4,
-        name: 'PHP',
-        coin: 200
-    },
-    {
-        id: 5,
-        name: 'ReactJS',
-        coin: 200
+countDown(10);
+
+function loop(start, end, cb) {
+    if (start <= end) {
+        cb(start);
+        return loop(start + 1, end, cb);
     }
-];
-var isFree = courses.every2(function (course, index, array) {
-    console.log(index);
-    return course.coin === 200;
-});
-console.log(isFree);
+}
+
+//vi du 2
+var array = ['JavaScript', 'PHP', 'Ruby'];
+
+loop(0, array.length - 1, function (index) {
+    console.log('index', index);
+})
+
+// Vi du 3 
+// 3*2*1 =
+// 6*5*...*1=
+function giaiThua(number) {
+    if (number > 0) {
+        return number * giaiThua(number - 1);
+    }
+    return 1;
+}
+
+console.log(giaiThua(6));
