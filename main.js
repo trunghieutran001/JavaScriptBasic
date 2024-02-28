@@ -1,15 +1,15 @@
 // forEach, find, filter, some, every, reduce
 
-// find2()
-Array.prototype.filter2 = function (callback) {
+// some2()
+Array.prototype.some2 = function (callback) {
     var output = [];
     for (var index in this) {
         if (this.hasOwnProperty(index)) {
-            var result = callback(this[index], index, this)
+            if (callback(this[index], index, this))
+                return true;
         }
-        if (result) {
-            output.push(this[index]);
-        }
+        else
+            return false;
     }
     return output;
 }
@@ -40,7 +40,8 @@ var courses = [
         coin: 500
     }
 ];
-var filterCourses = courses.filter2(function (course, index, array) {
-    return course.coin > 250;
+var isFree = courses.some2(function (course, index, array) {
+    console.log(index);
+    return course.coin === 4;
 });
-console.log(filterCourses);
+console.log(isFree);
